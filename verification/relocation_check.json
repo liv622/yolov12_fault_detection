@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "archive_crc": "PASS",
+  "relocated_to_path_with_chinese_and_spaces": true,
+  "image_frames": 4,
+  "video_frames": 12,
+  "source_self_contained": true
+}

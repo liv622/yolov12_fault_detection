@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "data": "SYNTHETIC_ONLY",
+  "epochs": 1,
+  "image_frames": 4,
+  "video_frames": 12,
+  "weights": "/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/train/weights/best.pt",
+  "test_metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "output_checks": {
+    "readable_images": 4,
+    "decoded_video_frames": 12,
+    "jsonl_records": 16
+  },
+  "note": "演示仅验证代码执行，不证明转辙机故障检测精度。"
+}

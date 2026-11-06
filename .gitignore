@@ -1,0 +1,15 @@
+.venv/
+.yolo/
+__pycache__/
+*.pyc
+*.cache
+*.egg-info/
+runs/
+datasets/point_machine/images/
+datasets/point_machine/labels/
+weights/*.pt
+/verification/transfer_train/
+/verification/low_conf/
+/verification/mismatch.yaml
+.env
+.env.*

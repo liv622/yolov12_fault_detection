@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "fresh_virtual_environment": true,
+  "wheel_cache_used": true,
+  "installation_and_doctor": "PASS",
+  "pip_check": "PASS",
+  "dataset_tests": 8
+}

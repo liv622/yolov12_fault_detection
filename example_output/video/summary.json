@@ -1,0 +1,8 @@
+{
+  "files": 1,
+  "frames": 12,
+  "detections": 0,
+  "confidence_threshold": 0.25,
+  "weights": "/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/train/weights/best.pt",
+  "note": "no_defect_detected 表示未检出目标，不等于设备正常。"
+}

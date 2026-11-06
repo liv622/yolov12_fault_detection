@@ -1,0 +1,2 @@
+错误：输出目录已非空，请换一个 --output，防止覆盖：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/images
+可在子命令前添加 --debug 查看完整堆栈。

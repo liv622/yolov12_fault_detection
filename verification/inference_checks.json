@@ -1,0 +1,7 @@
+{
+  "box_serialization": "PASS",
+  "boxes_exercised": 16,
+  "class_mismatch_rejection": "PASS",
+  "nonempty_output_rejection": "PASS",
+  "note": "极低阈值仅检查框序列化，不代表检测能力。"
+}

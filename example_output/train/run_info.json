@@ -1,0 +1,14 @@
+{
+  "task": "visible_defect_detection",
+  "weights": "/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/train/weights/best.pt",
+  "names": [
+    "bolt_missing",
+    "rod_damage",
+    "cable_damage",
+    "housing_damage"
+  ],
+  "device": "cpu",
+  "epochs_requested": 1,
+  "seed": 42,
+  "initial_weights": "random_initialization"
+}

@@ -1,0 +1,15 @@
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/home/liv/WK/oulanbo/output/point-machine-yolov12/.yolo/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+FlashAttention is not available on this device. Using scaled_dot_product_attention instead.
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+{
+  "python": "3.12.14",
+  "torch": "2.5.1+cpu",
+  "torchvision": "0.20.1+cpu",
+  "opencv": "4.10.0",
+  "cuda_available": false,
+  "source": "/home/liv/WK/oulanbo/output/point-machine-yolov12/vendor/yolov12",
+  "upstream_commit": "64d5ffc6db35a1bde446689ab8450ecd43475e00",
+  "cpu_forward_and_nms": "PASS"
+}

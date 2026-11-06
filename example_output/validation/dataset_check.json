@@ -1,0 +1,40 @@
+{
+  "names": [
+    "bolt_missing",
+    "rod_damage",
+    "cable_damage",
+    "housing_damage"
+  ],
+  "splits": {
+    "train": {
+      "images": 12,
+      "negative_images": 1,
+      "instances": {
+        "bolt_missing": 3,
+        "rod_damage": 3,
+        "cable_damage": 3,
+        "housing_damage": 2
+      }
+    },
+    "val": {
+      "images": 8,
+      "negative_images": 1,
+      "instances": {
+        "bolt_missing": 2,
+        "rod_damage": 2,
+        "cable_damage": 2,
+        "housing_damage": 1
+      }
+    },
+    "test": {
+      "images": 4,
+      "negative_images": 0,
+      "instances": {
+        "bolt_missing": 1,
+        "rod_damage": 1,
+        "cable_damage": 1,
+        "housing_damage": 1
+      }
+    }
+  }
+}

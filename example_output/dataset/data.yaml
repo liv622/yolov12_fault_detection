@@ -1,0 +1,9 @@
+path: .
+train: images/train
+val: images/val
+test: images/test
+names:
+- bolt_missing
+- rod_damage
+- cable_damage
+- housing_damage

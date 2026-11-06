@@ -1,0 +1,10 @@
+path: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/dataset
+names:
+- bolt_missing
+- rod_damage
+- cable_damage
+- housing_damage
+nc: 4
+train: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/dataset/images/train
+val: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/dataset/images/val
+test: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo/dataset/images/test

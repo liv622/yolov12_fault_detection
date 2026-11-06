@@ -1,0 +1,2 @@
+错误：权重类别与数据集不一致：权重=['bolt_missing', 'rod_damage', 'cable_damage', 'housing_damage']，数据集=['wrong_class']
+可在子命令前添加 --debug 查看完整堆栈。

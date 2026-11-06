@@ -1,0 +1,10 @@
+# 路径相对于本 YAML 所在目录；训练前请放入真实标注数据。
+path: ../datasets/point_machine
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: bolt_missing    # 螺栓缺失：标注预期安装位置周围的可见区域
+  1: rod_damage      # 连接杆可见断裂/变形
+  2: cable_damage    # 线缆可见破损
+  3: housing_damage  # 壳体可见破损
