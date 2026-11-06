@@ -1,0 +1,73 @@
+演示输出目录：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2
+FlashAttention is not available on this device. Using scaled_dot_product_attention instead.
+Ultralytics 8.3.63 🚀 Python-3.12.14 torch-2.5.1+cpu CPU (13th Gen Intel Core(TM) i7-13650HX)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train/yolov12n.yaml, data=/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train/data.resolved.yaml, epochs=1, time=None, patience=5, batch=2, imgsz=128, save=True, save_period=-1, cache=False, device=cpu, workers=0, project=/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2, name=train, exist_ok=True, pretrained=False, optimizer=AdamW, verbose=False, seed=42, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=0, resume=False, amp=False, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=False, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.001, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.0, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.0, bgr=0.0, mosaic=0.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      2368  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2, 1, 2]          
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  3                  -1  1      9344  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2, 1, 4]          
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  6                  -1  2    174720  ultralytics.nn.modules.block.A2C2f           [128, 128, 2, True, 4]        
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  2    677120  ultralytics.nn.modules.block.A2C2f           [256, 256, 2, True, 1]        
+  9                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 10             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 11                  -1  1     86912  ultralytics.nn.modules.block.A2C2f           [384, 128, 1, False, -1]      
+ 12                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 13             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 14                  -1  1     24000  ultralytics.nn.modules.block.A2C2f           [256, 64, 1, False, -1]       
+ 15                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 16            [-1, 11]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 17                  -1  1     74624  ultralytics.nn.modules.block.A2C2f           [192, 128, 1, False, -1]      
+ 18                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 19             [-1, 8]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 20                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]           
+ 21        [14, 17, 20]  1    431452  ultralytics.nn.modules.head.Detect           [4, [64, 128, 256]]           
+YOLOv12n summary: 497 layers, 2,520,444 parameters, 2,520,428 gradients, 6.0 GFLOPs
+
+Freezing layer 'model.21.dfl.conv.weight'
+[34m[1mtrain: [0mScanning /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/train...:   0%|          | 0/12 [00:00<?, ?it/s][34m[1mtrain: [0mScanning /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/train... 12 images, 1 backgrounds, 0 corrupt: 100%|██████████| 12/12 [00:00<00:00, 3046.89it/s]
+[34m[1mtrain: [0mNew cache created: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/train.cache
+[34m[1mval: [0mScanning /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/val...:   0%|          | 0/8 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/val... 8 images, 1 backgrounds, 0 corrupt: 100%|██████████| 8/8 [00:00<00:00, 3598.72it/s]
+[34m[1mval: [0mNew cache created: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/val.cache
+[34m[1moptimizer:[0m AdamW(lr=0.001, momentum=0.937) with parameter groups 121 weight(decay=0.0), 128 weight(decay=0.0005), 127 bias(decay=0.0)
+Image sizes 128 train, 128 val
+Using 0 dataloader workers
+Logging results to [1m/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train[0m
+Starting training for 1 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+  0%|          | 0/6 [00:00<?, ?it/s]        1/1         0G      1.396      1.382     0.8839          2        128:   0%|          | 0/6 [00:00<?, ?it/s]        1/1         0G      1.396      1.382     0.8839          2        128:  17%|█▋        | 1/6 [00:00<00:00,  9.71it/s]        1/1         0G      1.609      1.546      1.003          2        128:  17%|█▋        | 1/6 [00:00<00:00,  9.71it/s]        1/1         0G      1.073      1.239      0.669          2        128:  17%|█▋        | 1/6 [00:00<00:00,  9.71it/s]        1/1         0G      1.073      1.239      0.669          2        128:  50%|█████     | 3/6 [00:00<00:00, 15.12it/s]        1/1         0G     0.8677       1.12     0.5416          2        128:  50%|█████     | 3/6 [00:00<00:00, 15.12it/s]        1/1         0G      0.728      1.039     0.4539          1        128:  50%|█████     | 3/6 [00:00<00:00, 15.12it/s]        1/1         0G      0.728      1.039     0.4539          1        128:  83%|████████▎ | 5/6 [00:00<00:00, 16.97it/s]        1/1         0G     0.7811      1.074     0.4811          2        128:  83%|████████▎ | 5/6 [00:00<00:00, 16.97it/s]        1/1         0G     0.7811      1.074     0.4811          2        128: 100%|██████████| 6/6 [00:00<00:00, 16.89it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/2 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00, 16.82it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00, 16.80it/s]
+                   all          8          7          0          0          0          0
+
+1 epochs completed in 0.000 hours.
+Optimizer stripped from /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train/weights/last.pt, 5.4MB
+Optimizer stripped from /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train/weights/best.pt, 5.4MB
+
+Validating /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train/weights/best.pt...
+Ultralytics 8.3.63 🚀 Python-3.12.14 torch-2.5.1+cpu CPU (13th Gen Intel Core(TM) i7-13650HX)
+YOLOv12n summary (fused): 376 layers, 2,509,124 parameters, 0 gradients, 5.8 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/2 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00, 43.55it/s]
+                   all          8          7          0          0          0          0
+Speed: 0.1ms preprocess, 4.8ms inference, 0.0ms loss, 0.1ms postprocess per image
+训练完成，权重：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/train/weights/best.pt
+Ultralytics 8.3.63 🚀 Python-3.12.14 torch-2.5.1+cpu CPU (13th Gen Intel Core(TM) i7-13650HX)
+YOLOv12n summary (fused): 376 layers, 2,509,124 parameters, 0 gradients, 5.8 GFLOPs
+[34m[1mval: [0mScanning /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/test...:   0%|          | 0/4 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/test... 4 images, 0 backgrounds, 0 corrupt: 100%|██████████| 4/4 [00:00<00:00, 2229.83it/s]
+[34m[1mval: [0mNew cache created: /home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/dataset/labels/test.cache
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/2 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00, 58.67it/s]
+                   all          4          4          0          0          0          0
+Speed: 0.0ms preprocess, 7.5ms inference, 0.0ms loss, 0.1ms postprocess per image
+评估结果：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/validation/metrics.json
+处理 1/4：demo_000.jpg
+处理 2/4：demo_001.jpg
+处理 3/4：demo_002.jpg
+处理 4/4：demo_003.jpg
+推理完成：4 张图片/视频帧，结果：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/images
+处理 1/1：synthetic.avi
+推理完成：12 张图片/视频帧，结果：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/video
+演示通过，报告：/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2/demo_report.json

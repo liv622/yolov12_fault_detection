@@ -66,3 +66,18 @@ def new_run(value):
         raise ValueError(f"输出目录已非空，请换一个 --output，防止覆盖：{path}")
     path.mkdir(parents=True, exist_ok=True)
     return path
+
+
+def new_numbered_run(value):
+    """为默认演示原子创建新目录，保留已有结果及并发运行的输出。"""
+    base = Path(value).expanduser().resolve()
+    base.parent.mkdir(parents=True, exist_ok=True)
+    number = 1
+    while True:
+        candidate = base if number == 1 else base.with_name(f"{base.name}{number}")
+        try:
+            candidate.mkdir()
+        except FileExistsError:
+            number += 1
+        else:
+            return candidate

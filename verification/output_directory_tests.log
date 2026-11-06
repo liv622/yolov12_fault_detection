@@ -1,0 +1,15 @@
+test_corrupt_image_rejected (test_dataset.DatasetTests.test_corrupt_image_rejected) ... ok
+test_empty_negative_label_allowed (test_dataset.DatasetTests.test_empty_negative_label_allowed) ... ok
+test_empty_training_set_rejected (test_dataset.DatasetTests.test_empty_training_set_rejected) ... ok
+test_invalid_boxes_rejected (test_dataset.DatasetTests.test_invalid_boxes_rejected) ... ok
+test_missing_label_rejected (test_dataset.DatasetTests.test_missing_label_rejected) ... ok
+test_orphan_label_rejected (test_dataset.DatasetTests.test_orphan_label_rejected) ... ok
+test_train_val_leakage_rejected (test_dataset.DatasetTests.test_train_val_leakage_rejected) ... ok
+test_valid_relative_paths (test_dataset.DatasetTests.test_valid_relative_paths) ... ok
+test_explicit_output_cannot_overwrite_existing_results (test_output_directories.OutputDirectoryTests.test_explicit_output_cannot_overwrite_existing_results) ... ok
+test_repeated_demo_preserves_previous_results (test_output_directories.OutputDirectoryTests.test_repeated_demo_preserves_previous_results) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.037s
+
+OK

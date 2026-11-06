@@ -49,10 +49,22 @@
 
 上游关于 FlashAttention 回退和默认 nano 规模的提示不属于执行错误。默认运行已关闭额外在线资源下载，字体使用 matplotlib 自带字体的本地缓存。
 
+## 重复启动修复验证
+
+旧版将默认演示目录固定为 `runs/demo`，该目录包含测试产物时会触发防覆盖检查，导致同一条演示命令无法重复运行。
+
+修复后，不指定 `--output` 的演示会原子创建一个未占用的新目录；显式指定的输出目录仍执行原有防覆盖检查。
+
+- 连续实际执行两次 `python main.py demo --device cpu`，分别输出至 `runs/demo2`、`runs/demo3`，退出码均为 0。
+- 两次均完成训练、独立评估、4 张图片推理及 12 帧视频推理，并重新解码输出文件。
+- 对原 `runs/demo` 下所有文件比较 SHA-256，确认其内容未被修改。
+- 全部 10 项测试通过，包括新增的重复运行保留旧结果、显式输出目录防覆盖回归测试。
+- 证据：`verification/demo_repeat_check.json`、`verification/demo_repeat_1.log`、`verification/demo_repeat_2.log`、`verification/output_directory_tests.log`。
+
 ## 打包说明
 
 ZIP 附带官方源码、配置、项目代码、许可证、演示产物和测试日志；不附虚拟环境或系统依赖 wheel。首次安装需网络。
 
 为使解压后的默认演示命令能直接执行，原 `runs/demo/` 在 ZIP 中映射为 `example_output/`，`runs/` 不打包。JSON 和日志中的绝对路径保留原始执行记录。
 
-开发目录中的演示产物仍位于 `runs/demo/`；如果直接在开发目录重跑演示，指定一个新输出目录，例如 `--output runs/my_demo`。
+开发目录中的演示产物仍位于 `runs/demo/`。默认演示命令现已支持重复运行：自动选择 `runs/demo2`、`runs/demo3` 等新目录；显式指定 `--output` 时仍保护已有结果。

@@ -46,7 +46,8 @@ def build_parser():
         command.add_argument("--data", default=str(ROOT / "configs/point_machine.yaml"))
         command.add_argument("--batch", type=positive_int, default=4)
     for command in (train, val, predict, demo):
-        command.add_argument("--output", default=str(ROOT / "runs" / command.prog.split()[-1]))
+        command.add_argument("--output", default=None if command is demo else str(ROOT / "runs" / command.prog.split()[-1]),
+                             help="输出目录；demo 默认自动选择 runs/demo、runs/demo2 等新目录")
         command.add_argument("--device", default="auto", help="auto、cpu 或单个 GPU 编号")
         command.add_argument("--threads", type=positive_int, default=2, help="CPU 线程数")
         command.add_argument("--imgsz", type=image_size, default=128 if command is demo else 640)
@@ -90,8 +91,9 @@ def doctor(args):
 def demo(args):
     from point_machine.demo import make_demo, verify_demo_outputs
     from point_machine.pipeline import predict, train, validate, write_json
-    from point_machine.runtime import new_run
-    output = new_run(args.output)
+    from point_machine.runtime import new_numbered_run, new_run
+    output = new_numbered_run(ROOT / "runs/demo") if args.output is None else new_run(args.output)
+    print(f"演示输出目录：{output}", flush=True)
     data = make_demo(output / "dataset")
     common = {"device": args.device, "threads": args.threads, "imgsz": args.imgsz}
     best = train(SimpleNamespace(**common, data=str(data), output=str(output / "train"),

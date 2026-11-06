@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "same_command_repeated": 2,
+  "output_directories": [
+    "/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo2",
+    "/home/liv/WK/oulanbo/output/point-machine-yolov12/runs/demo3"
+  ],
+  "original_output_unchanged": true,
+  "image_frames_per_run": 4,
+  "video_frames_per_run": 12
+}
